@@ -1,10 +1,11 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
+import { getMe } from "@/service/getMe";
 
-export default function Home() {
-  console.log("root router");
+export default async function Home() {
+  const user = await getMe();
+  // console.log(user);
+  // console.log("root router");
   return (
     <div>
       next js project
